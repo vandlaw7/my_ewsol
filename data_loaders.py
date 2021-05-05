@@ -177,7 +177,9 @@ class WSOLImageLabelDataset(Dataset):
 
         new_image_ids = []
         new_image_labels = {}
+        print(unique_labels)
         for _label in unique_labels:
+            print(_label)
             indices = np.where(image_labels == _label)[0]
             print(indices)
             sampled_indices = np.random.choice(
