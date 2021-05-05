@@ -1,0 +1,17 @@
+python main.py --dataset_name CUB \
+               --architecture vgg16 \
+               --wsol_method cam \
+               --experiment_name CUB_vgg16_CAM_val5 \
+               --pretrained TRUE \
+               --num_val_sample_per_class 5 \
+               --large_feature_map FALSE \
+               --batch_size 32 \
+               --epochs 10 \
+               --lr 0.002 \
+               --lr_decay_frequency 3 \
+               --weight_decay 5.00E-04 \
+               --override_cache FALSE \
+               --workers 4 \
+               --box_v2_metric True \
+               --iou_threshold_list 30 50 70 \
+               --eval_checkpoint_type last
