@@ -171,8 +171,10 @@ class WSOLImageLabelDataset(Dataset):
         if self.num_sample_per_class == 0:
             return
         image_ids = np.array(self.image_ids)
+        print(image_ids)
         image_labels = np.array([self.image_labels[_image_id]
                                  for _image_id in self.image_ids])
+        print(image_labels)
         unique_labels = np.unique(image_labels)
 
         new_image_ids = []
